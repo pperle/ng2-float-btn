@@ -1,6 +1,6 @@
 {
   "name": "ng2-float-btn",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Button group for angular 2 and angular material 2.",
   "keywords": [
     "angular 2",
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/BaronChen/ng2-float-btn/issues"
   },
-  "author": "baron chen",
+  "author": "baron chen, Xiaolong Tang",
   "license": "ISC",
   "repository": {
     "type": "git",
