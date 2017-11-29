@@ -1,0 +1,27 @@
+{
+    "name": "ng2-float-btn",
+    "version": "0.0.4",
+    "description": "Button group for angular 2 and angular material 2.",
+    "keywords": [
+        "angular 2",
+        "angular material 2",
+        "fab",
+        "button group",
+        "collapse"
+    ],
+    "homepage": "https://github.com/BaronChen/ng2-float-btn",
+    "bugs": {
+        "url": "https://github.com/BaronChen/ng2-float-btn/issues"
+    },
+    "author": "baron chen, Xiaolong Tang",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BaronChen/ng2-float-btn.git"
+    },
+    "main": "index.js",
+    "peerDependencies": {
+        "@angular/core": ">=2.0.0",
+        "rxjs": ">=5.0.0"
+    }
+}
