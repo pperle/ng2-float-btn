@@ -29,7 +29,7 @@ var config = {
           {
             loader: 'ts-loader',
             options: {
-              include: ['src/**/*.ts', 'app/**/*.ts']
+              // include: ['src/**/*.ts', 'app/**/*.ts']
             },
           },
           {

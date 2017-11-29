@@ -21,9 +21,16 @@
     "strictNullChecks": false,
     "outDir": "dist",
     "baseUrl": "src",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "paths": {
       "ng2-float-btn": ["./index"]
-    }
+    },
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   },
   "files": [
     "src/index.ts"
