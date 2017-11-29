@@ -27,10 +27,11 @@
     "test": "karma start",
     "lint": "tslint \"src/**/*.ts\" --project tsconfig.json --type-check",
     "clear": "rimraf dist",
-    "build": "npm-run-all --serial clear build:ngc build:umd",
+    "build": "npm-run-all --serial clear build:ngc build:umd copy",
     "build:ngc": "ngc -p tsconfig.ngc.json",
     "build:umd": "cross-env NODE_ENV=production webpack",
-    "build:app": "cross-env webpack --config app/webpack.config"
+    "build:app": "cross-env webpack --config app/webpack.config",
+    "copy": "copyfiles README.md dist && copyfiles -u 1 ./build-helper/package.json dist"
   },
   "dependencies": {},
   "devDependencies": {
@@ -68,7 +69,8 @@
     "typescript": "^2.6.2",
     "webpack": "^2.4.0",
     "webpack-dev-server": "^2.4.5",
-      "zone.js": "^0.8.4",
-      "core-js": "^2.4.1"      
+    "zone.js": "^0.8.4",
+    "core-js": "^2.4.1",
+    "copyfiles": "^1.2.0"      
   }
 }
