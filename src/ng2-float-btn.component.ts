@@ -25,6 +25,10 @@ export type BtnAnimateState = ('void' | 'right-show' | 'left-show' | 'up-show' |
 		}`,
         `button {
 			margin: 8px;
+            color: white;
+            background-color: rgb(255, 64, 129);
+            width: 56px;
+            height: 56px;
 		}`
     ],
     animations: [
