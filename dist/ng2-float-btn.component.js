@@ -61,7 +61,7 @@ var Ng2FloatBtnComponent = /** @class */ (function () {
                     selector: 'ng2-float-btn',
                     styles: [
                         "ul {\n\t\t\tlist-style-type: none; \n\t\t\tmargin: 0; \n\t\t\tpadding: 0; \n\t\t\toverflow: hidden;\n\t\t\tz-index: 200;\n\t\t}",
-                        "button {\n\t\t\tmargin: 8px;\n\t\t}"
+                        "button {\n\t\t\tmargin: 8px;\n            color: white;\n            background-color: rgb(255, 64, 129);\n            width: 56px;\n            height: 56px;\n\t\t}"
                     ],
                     animations: [
                         core_1.trigger('buttonAnimation', [
