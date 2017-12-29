@@ -105,13 +105,13 @@ export type BtnAnimateState = ('void' | 'right-show' | 'left-show' | 'up-show' |
 		<ul ng2-float-btn-direction [btnDirection]="direction">
 			<li [ngSwitch]="isMini">
 				<ng-container *ngSwitchCase="false">
-					<button md-fab color="mainButton.color"
+					<button mat-fab color="mainButton.color"
 						(click)="triggerBtnMenu()" >
 						<mat-icon>{{mainButton.iconName}}</mat-icon>
 					</button>
 				</ng-container>
 				<ng-container *ngSwitchCase="true">
-					<button md-mini-fab color="mainButton.color"
+					<button mat-mini-fab color="mainButton.color"
 						(click)="triggerBtnMenu()" >
 						<mat-icon>{{mainButton.iconName}}</mat-icon>
 					</button>
@@ -120,14 +120,14 @@ export type BtnAnimateState = ('void' | 'right-show' | 'left-show' | 'up-show' |
 			<li *ngFor="let btn of buttons" ng2-float-btn-li>
 				<ng-container [ngSwitch]="isMini">
 					<ng-container *ngSwitchCase="false">
-						<button md-fab color="btn.color"
+						<button mat-fab color="btn.color"
 							[@buttonAnimation]="animateState" *ngIf="showBtns" 
 							(click)="fireAction($event, btn.onClick)">
 							<mat-icon>{{btn.iconName}}</mat-icon>
 						</button>
 					</ng-container>
 					<ng-container *ngSwitchCase="true">
-						<button md-mini-fab color="btn.color"
+						<button mat-mini-fab color="btn.color"
 							[@buttonAnimation]="animateState" *ngIf="showBtns" 
 							(click)="fireAction($event, btn.onClick)">
 							<mat-icon>{{btn.iconName}}</mat-icon>
