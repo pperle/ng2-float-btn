@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@angular/core"), require("@angular/forms"), require("@angular/material"), require("@angular/platform-browser"));
+		module.exports = factory(require("@angular/core"), require("@angular/platform-browser"), require("@angular/forms"), require("@angular/material"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@angular/core", "@angular/forms", "@angular/material", "@angular/platform-browser"], factory);
+		define(["@angular/core", "@angular/platform-browser", "@angular/forms", "@angular/material"], factory);
 	else if(typeof exports === 'object')
-		exports["ng2-float-btn"] = factory(require("@angular/core"), require("@angular/forms"), require("@angular/material"), require("@angular/platform-browser"));
+		exports["ng2-float-btn"] = factory(require("@angular/core"), require("@angular/platform-browser"), require("@angular/forms"), require("@angular/material"));
 	else
-		root["ng2-float-btn"] = factory(root["@angular/core"], root["@angular/forms"], root["@angular/material"], root["@angular/platform-browser"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_9__) {
+		root["ng2-float-btn"] = factory(root["@angular/core"], root["@angular/platform-browser"], root["@angular/forms"], root["@angular/material"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -43,9 +43,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -73,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -224,7 +221,7 @@ var Ng2FloatBtnComponent = /** @class */ (function () {
             ],
             //the two hidden button is used to trigger a render of material fab 
             //so that the buttons with attribute binding will render correctly later
-            template: "\n\t\t<ul ng2-float-btn-direction [btnDirection]=\"direction\">\n\t\t\t<li [ngSwitch]=\"isMini\">\n\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t<button md-fab [color]=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t<button md-mini-fab [color]=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t</li>\n\t\t\t<li *ngFor=\"let btn of buttons\" ng2-float-btn-li>\n\t\t\t\t<ng-container [ngSwitch]=\"isMini\">\n\t\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t\t<button md-fab [color]=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t\t<button md-mini-fab [color]=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t</ng-container>\n\t\t\t\t\n\t\t\t\t<label *ngIf=\"shouldShowLabel(btn.label) && showBtns\" [@labelAnimation]=\"showBtns\"\n\t\t\t\t\t\tng2-float-btn-label [isMini]=\"isMini\">\n\t\t\t\t\t{{btn.label}}\n\t\t\t\t</label>\n\t\t\t</li>\n\t\t\t\n\t\t</ul>\n\t\t\n  "
+            template: "\n\t\t<ul ng2-float-btn-direction [btnDirection]=\"direction\">\n\t\t\t<li [ngSwitch]=\"isMini\">\n\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t<button md-fab color=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t<button md-mini-fab color=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t</li>\n\t\t\t<li *ngFor=\"let btn of buttons\" ng2-float-btn-li>\n\t\t\t\t<ng-container [ngSwitch]=\"isMini\">\n\t\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t\t<button md-fab color=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t\t<button md-mini-fab color=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t</ng-container>\n\t\t\t\t\n\t\t\t\t<label *ngIf=\"shouldShowLabel(btn.label) && showBtns\" [@labelAnimation]=\"showBtns\"\n\t\t\t\t\t\tng2-float-btn-label [isMini]=\"isMini\">\n\t\t\t\t\t{{btn.label}}\n\t\t\t\t</label>\n\t\t\t</li>\n\t\t\t\n\t\t</ul>\n\t\t\n  "
         }),
         __metadata("design:paramtypes", [])
     ], Ng2FloatBtnComponent);
@@ -239,6 +236,20 @@ exports.Ng2FloatBtnComponent = Ng2FloatBtnComponent;
 
 "use strict";
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(1));
+__export(__webpack_require__(3));
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -246,14 +257,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_1 = __webpack_require__(9);
+var platform_browser_1 = __webpack_require__(4);
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(7);
-var material_1 = __webpack_require__(8);
+var forms_1 = __webpack_require__(5);
+var material_1 = __webpack_require__(6);
 var ng2_float_btn_component_1 = __webpack_require__(1);
-var ng2_float_btn_direction_directive_1 = __webpack_require__(4);
-var ng2_float_btn_li_directive_1 = __webpack_require__(6);
-var ng2_float_btn_label_directive_1 = __webpack_require__(5);
+var ng2_float_btn_direction_directive_1 = __webpack_require__(7);
+var ng2_float_btn_li_directive_1 = __webpack_require__(8);
+var ng2_float_btn_label_directive_1 = __webpack_require__(9);
 var Ng2FloatBtnModule = /** @class */ (function () {
     /* istanbul ignore next */
     function Ng2FloatBtnModule() {
@@ -283,21 +294,25 @@ exports.Ng2FloatBtnModule = Ng2FloatBtnModule;
 
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 4 */
+/***/ (function(module, exports) {
 
-"use strict";
-
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(1));
-__export(__webpack_require__(2));
-
+module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
 
 /***/ }),
-/* 4 */
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -363,7 +378,50 @@ exports.Ng2FloatBtnDirectionDirective = Ng2FloatBtnDirectionDirective;
 
 
 /***/ }),
-/* 5 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(0);
+var Ng2FloatBtnLiDirective = /** @class */ (function () {
+    function Ng2FloatBtnLiDirective(el) {
+        this.el = el;
+    }
+    Ng2FloatBtnLiDirective.prototype.ngOnInit = function () {
+        this.el.nativeElement.style.display = 'flex';
+        this.setJustifyContent("flex-start");
+        this.setDirection("column");
+    };
+    Ng2FloatBtnLiDirective.prototype.setJustifyContent = function (position) {
+        this.el.nativeElement.style.justifyContent = position;
+    };
+    Ng2FloatBtnLiDirective.prototype.setDirection = function (flexDirection) {
+        this.el.nativeElement.style.flexDirection = flexDirection;
+    };
+    Ng2FloatBtnLiDirective = __decorate([
+        core_1.Directive({
+            selector: '[ng2-float-btn-li]'
+        }),
+        __metadata("design:paramtypes", [core_1.ElementRef])
+    ], Ng2FloatBtnLiDirective);
+    return Ng2FloatBtnLiDirective;
+}());
+exports.Ng2FloatBtnLiDirective = Ng2FloatBtnLiDirective;
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -407,67 +465,6 @@ var Ng2FloatBtnLableDirective = /** @class */ (function () {
 }());
 exports.Ng2FloatBtnLableDirective = Ng2FloatBtnLableDirective;
 
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(0);
-var Ng2FloatBtnLiDirective = /** @class */ (function () {
-    function Ng2FloatBtnLiDirective(el) {
-        this.el = el;
-    }
-    Ng2FloatBtnLiDirective.prototype.ngOnInit = function () {
-        this.el.nativeElement.style.display = 'flex';
-        this.setJustifyContent("flex-start");
-        this.setDirection("column");
-    };
-    Ng2FloatBtnLiDirective.prototype.setJustifyContent = function (position) {
-        this.el.nativeElement.style.justifyContent = position;
-    };
-    Ng2FloatBtnLiDirective.prototype.setDirection = function (flexDirection) {
-        this.el.nativeElement.style.flexDirection = flexDirection;
-    };
-    Ng2FloatBtnLiDirective = __decorate([
-        core_1.Directive({
-            selector: '[ng2-float-btn-li]'
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], Ng2FloatBtnLiDirective);
-    return Ng2FloatBtnLiDirective;
-}());
-exports.Ng2FloatBtnLiDirective = Ng2FloatBtnLiDirective;
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
 
 /***/ })
 /******/ ]);

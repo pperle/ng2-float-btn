@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var models_1 = require("./models");
 var Ng2FloatBtnComponent = /** @class */ (function () {
     function Ng2FloatBtnComponent() {
         this.showBtns = false;
@@ -108,18 +109,18 @@ var Ng2FloatBtnComponent = /** @class */ (function () {
                             ])
                         ])
                     ],
-                    //the two hidden button is used to trigger a render of material fab 
+                    //the two hidden button is used to trigger a render of material fab
                     //so that the buttons with attribute binding will render correctly later
-                    template: "\n\t\t<ul ng2-float-btn-direction [btnDirection]=\"direction\">\n\t\t\t<li [ngSwitch]=\"isMini\">\n\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t<button md-fab [color]=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t<button md-mini-fab [color]=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t</li>\n\t\t\t<li *ngFor=\"let btn of buttons\" ng2-float-btn-li>\n\t\t\t\t<ng-container [ngSwitch]=\"isMini\">\n\t\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t\t<button md-fab [color]=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t\t<button md-mini-fab [color]=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t</ng-container>\n\t\t\t\t\n\t\t\t\t<label *ngIf=\"shouldShowLabel(btn.label) && showBtns\" [@labelAnimation]=\"showBtns\"\n\t\t\t\t\t\tng2-float-btn-label [isMini]=\"isMini\">\n\t\t\t\t\t{{btn.label}}\n\t\t\t\t</label>\n\t\t\t</li>\n\t\t\t\n\t\t</ul>\n\t\t\n  "
+                    template: "\n\t\t<ul ng2-float-btn-direction [btnDirection]=\"direction\">\n\t\t\t<li [ngSwitch]=\"isMini\">\n\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t<button md-fab color=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t<button md-mini-fab color=\"mainButton.color\"\n\t\t\t\t\t\t(click)=\"triggerBtnMenu()\" >\n\t\t\t\t\t\t<mat-icon>{{mainButton.iconName}}</mat-icon>\n\t\t\t\t\t</button>\n\t\t\t\t</ng-container>\n\t\t\t</li>\n\t\t\t<li *ngFor=\"let btn of buttons\" ng2-float-btn-li>\n\t\t\t\t<ng-container [ngSwitch]=\"isMini\">\n\t\t\t\t\t<ng-container *ngSwitchCase=\"false\">\n\t\t\t\t\t\t<button md-fab color=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t\t<ng-container *ngSwitchCase=\"true\">\n\t\t\t\t\t\t<button md-mini-fab color=\"btn.color\"\n\t\t\t\t\t\t\t[@buttonAnimation]=\"animateState\" *ngIf=\"showBtns\" \n\t\t\t\t\t\t\t(click)=\"fireAction($event, btn.onClick)\">\n\t\t\t\t\t\t\t<mat-icon>{{btn.iconName}}</mat-icon>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</ng-container>\n\t\t\t\t</ng-container>\n\t\t\t\t\n\t\t\t\t<label *ngIf=\"shouldShowLabel(btn.label) && showBtns\" [@labelAnimation]=\"showBtns\"\n\t\t\t\t\t\tng2-float-btn-label [isMini]=\"isMini\">\n\t\t\t\t\t{{btn.label}}\n\t\t\t\t</label>\n\t\t\t</li>\n\t\t\t\n\t\t</ul>\n\t\t\n  "
                 },] },
     ];
     /** @nocollapse */
     Ng2FloatBtnComponent.ctorParameters = function () { return []; };
     Ng2FloatBtnComponent.propDecorators = {
-        'buttons': [{ type: core_1.Input },],
-        'mainButton': [{ type: core_1.Input },],
-        'direction': [{ type: core_1.Input },],
-        'isMini': [{ type: core_1.Input },],
+        "buttons": [{ type: core_1.Input },],
+        "mainButton": [{ type: core_1.Input },],
+        "direction": [{ type: core_1.Input },],
+        "isMini": [{ type: core_1.Input },],
     };
     return Ng2FloatBtnComponent;
 }());

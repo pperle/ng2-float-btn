@@ -25,7 +25,7 @@ var Ng2FloatBtnLableDirective = /** @class */ (function () {
         { type: core_1.ElementRef, },
     ]; };
     Ng2FloatBtnLableDirective.propDecorators = {
-        'isMini': [{ type: core_1.Input },],
+        "isMini": [{ type: core_1.Input },],
     };
     return Ng2FloatBtnLableDirective;
 }());

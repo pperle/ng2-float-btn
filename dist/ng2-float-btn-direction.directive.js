@@ -45,7 +45,7 @@ var Ng2FloatBtnDirectionDirective = /** @class */ (function () {
         { type: core_1.ElementRef, },
     ]; };
     Ng2FloatBtnDirectionDirective.propDecorators = {
-        'btnDirection': [{ type: core_1.Input },],
+        "btnDirection": [{ type: core_1.Input },],
     };
     return Ng2FloatBtnDirectionDirective;
 }());

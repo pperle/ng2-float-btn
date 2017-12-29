@@ -8,7 +8,6 @@ var ng2_float_btn_component_1 = require("./ng2-float-btn.component");
 var ng2_float_btn_direction_directive_1 = require("./ng2-float-btn-direction.directive");
 var ng2_float_btn_li_directive_1 = require("./ng2-float-btn-li.directive");
 var ng2_float_btn_label_directive_1 = require("./ng2-float-btn-label.directive");
-/* istanbul ignore next */
 var Ng2FloatBtnModule = /** @class */ (function () {
     function Ng2FloatBtnModule() {
     }
